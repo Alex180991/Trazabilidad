@@ -21,21 +21,53 @@ public String getNombre(){return Nombre;}
 public String getApellidos(){return Apellidos;}
 public int getEdad(){return Edad;}
 
-public void Mostrar()
+public static void main(String[] args)
+	{ package ent;
 
+public class Alumno extends Persona
 {
-	System.out.println("Mi nombre es: " + getNombre() + getApellidos() 
-			+ " y tengo " + getEdad() + " años");
+	//atributos
+	private int Cuenta;
+	private String Carrera;
+	
+	//Constructor
+public Alumno (String Nombre, String Apellidos, int Edad)
+{
+	super (Nombre, Apellidos, Edad);
+	
+}
+
+public void setCuenta (int Cuenta) {this.Cuenta = Cuenta;}
+public void setCarrera (String Carrera) {this.Carrera = Carrera;}
+public int getCuenta () {return Cuenta;}
+public String getCarrera() {return Carrera;}
+public void Mostrar1()
+{
+	System.out.println("Soy " + getNombre() + " y estudio la carrera de: " + getCarrera() 
+	+ " y mi No. de cuenta es: " + getCuenta() + " y tengo " + getEdad() + " años");
+}
+
+public void esMayorDeEdad(int Edad) {
+	
+	if(Edad>=18)
+	{
+		System.out.println("Soy Mayor de edad");
+	}
+	else {System.out.println("No soy mayor de edad");}
+}
+}
 package ent;
 
-public class Test {
+public class Test2 {
 
-	public static void main (String[] args)
-	
-	{
-		Persona persona1 = new Persona ("Erick", " Gonzalez", 30);			
-	    persona1.Mostrar();
-	    persona1.esMayorDeEdad(30);
+		Alumno Alumno1 = new Alumno ("Erik", "Gonzalez", 30);
+		Alumno1.setCuenta (12496703);
+		Alumno1.setCarrera ("Ing En software y redes");
+		Alumno1.Mostrar1();
+		Alumno1.esMayorDeEdad(30);
 	}
+	
+}
+
 	
 }
