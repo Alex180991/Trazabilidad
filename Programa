@@ -1,0 +1,41 @@
+package ent;
+
+public class Persona {
+    //Atributos
+	private String Nombre;
+	public String Apellidos;
+	private int Edad;
+
+	//Constructor
+public Persona (String Nombre, String Apellidos, int Edad) 
+
+{
+	this.Nombre = Nombre;
+	this.Apellidos = Apellidos;
+	this.Edad = Edad;
+
+}
+
+//Metodos
+public String getNombre(){return Nombre;}
+public String getApellidos(){return Apellidos;}
+public int getEdad(){return Edad;}
+
+public void Mostrar()
+
+{
+	System.out.println("Mi nombre es: " + getNombre() + getApellidos() 
+			+ " y tengo " + getEdad() + " años");
+package ent;
+
+public class Test {
+
+	public static void main (String[] args)
+	
+	{
+		Persona persona1 = new Persona ("Erick", " Gonzalez", 30);			
+	    persona1.Mostrar();
+	    persona1.esMayorDeEdad(30);
+	}
+	
+}
